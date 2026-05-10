@@ -1,0 +1,107 @@
+@layer pages {
+  .contact-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    container-type: inline-size;
+  }
+  
+  @media (min-width: 1024px) {
+    .contact-page {
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+    }
+  }
+  
+  @container (min-width: 1024px) {
+    .contact-page {
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+    }
+  }
+  
+  .contact-form .form-group {
+    position: relative;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 1rem 0;
+    outline: none;
+  }
+  
+  .contact-form label {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  
+  .contact-form input:focus+label,
+  .contact-form input:not(:placeholder-shown)+label {
+    top: -1rem;
+    font-size: 0.8rem;
+    color: var(--naranja-pro);
+    opacity: 1;
+  }
+  
+  .btn-submit-pro {
+    background: var(--azul-pro);
+    color: var(--blanco-puro);
+  
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+  
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+  
+    &:hover {
+      background: var(--naranja-pro);
+      color: var(--blanco-puro);
+  
+      transform: scale(1.05);
+    }
+  
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  
+  .btn.btn-submit-pro {
+    background: var(--azul-pro);
+    color: var(--blanco-puro);
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+    box-shadow: none;
+  }
+  
+  .btn.btn-submit-pro:hover {
+    background: var(--naranja-pro);
+    transform: scale(1.05);
+  }
+  
+  .info-glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border-left: 6px solid var(--naranja-pro);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.05);
+  }
+}

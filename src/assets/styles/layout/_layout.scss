@@ -1,0 +1,114 @@
+@layer layout {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem var(--page-padding-x);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    container-type: inline-size;
+    container-name: nav-container;
+  }
+  
+  @media (min-width: 768px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  @container nav-container (min-width: 768px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  .logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  
+  .header nav {
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+  
+  .header nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: var(--naranja-pro);
+    transition: 0.3s;
+  }
+  
+  .header nav a:hover::after,
+  .header nav a.active::after {
+    width: 100%;
+  }
+  
+  .header nav a.active {
+    color: var(--naranja-pro);
+  }
+  
+  :is(.hero, .speakers-page, .contact-page, .article-page) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 4rem var(--page-padding-x);
+    container-type: inline-size;
+  }
+  
+  :is(.hero, .speakers-page, .contact-page, .article-page)::after {
+    content: "";
+    position: absolute;
+    width: clamp(150px, 30vw, 260px);
+    height: clamp(150px, 25vw, 200px);
+    background: var(--naranja-pro);
+    top: -40px;
+    right: -40px;
+    border-radius: 60% 40% 70% 30%;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  
+  :is(.hero, .speakers-page, .contact-page, .article-page)::before {
+    content: "";
+    position: absolute;
+    width: clamp(150px, 30vw, 240px);
+    height: clamp(150px, 25vw, 180px);
+    background: var(--azul-pro);
+    bottom: -40px;
+    left: -40px;
+    border-radius: 50% 50% 30% 70%;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 2rem var(--page-padding-x);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    opacity: 0.7;
+  }
+  
+}

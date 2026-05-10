@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto · Jornadas de Artesanía</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/styles/main.scss">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <i class="fa-solid fa-hands"></i> Artesanía
+    </div>
+    <nav class="navbar navbar-expand-lg">
+      <a href="index.html">
+        <i class="fa-solid fa-house"></i> Inicio
+      </a>
+
+      <a href="ponentes.html">
+        <i class="fa-solid fa-users"></i> Ponentes
+      </a>
+      
+      <a href="informacion.html">
+        <i class="fa-solid fa-circle-info"></i> Información
+      </a>
+
+      <a href="contacto.html"  class="active">
+        <i class="fa-solid fa-envelope"></i> Contacto
+      </a>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+
+    <div class="hero__content">
+      <h1 class="display-1">Escríbenos</h1>
+
+      <form class="contact-form" name="contacto" method="POST" data-netlify="true">
+        <div class="form-group">
+          <input class= "form-control" type="text" name="nombre" id="nombre" required placeholder=" ">
+          <label for="nombre">Nombre completo</label>
+          <div class="line"></div>
+        </div>
+
+        <div class="form-group">
+          <input class= "form-control" type="email" name="email" id="email" required placeholder=" ">
+          <label for="email">Email de contacto</label>
+          <div class="line"></div>
+        </div>
+
+        <div class="form-group">
+          <textarea name="mensaje" id="mensaje" required placeholder=" " rows="4"></textarea>
+          <label for="mensaje">¿En qué podemos ayudarte? ✍️</label>
+          <div class="line"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit-pro rounded-pill">
+          <i class="fa-solid fa-paper-plane"></i> ENVIAR MENSAJE
+        </button>
+      </form>
+    </div>
+
+    <div class="contact-info-side">
+      <div class="info-glass-card">
+        <div class="info-block">
+          <span class="info-num">01</span>
+          <h4><i class="fa-solid fa-location-dot"></i> UBICACIÓN</h4>
+          <p>Fabra i Coats, Carrer de Sant Adrià, 20, Barcelona</p>
+        </div>
+
+        <div class="info-block">
+          <span class="info-num">02</span>
+          <h4><i class="fa-solid fa-paper-plane"></i> CONTACTO DIRECTO</h4>
+          <p>hola@jornadasartesania.com</p>
+          <p>📞 +34 932 123 456</p>
+        </div>
+
+        <div class="info-block">
+          <span class="info-num">03</span>
+          <h4><i class="fa-solid fa-camera"></i> REDES SOCIALES</h4>
+          <p>@artesania_bcn</p>
+          <p>#ArtesaniaBarcelona2026</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <include src="./views/footer.html"></include>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+@layer components {
+    .infinite-carousel {
+        margin-left: calc(-1 * var(--page-padding-x));
+        width: 100vw;
+        overflow: hidden;
+        padding: 2rem 0;
+    }
+
+    .carousel-track {
+        display: flex;
+        gap: 2rem;
+        animation: scroll-horizontal 40s linear infinite;
+        width: max-content;
+    }
+
+    .carousel-track:hover {
+        animation-play-state: paused;
+    }
+
+    .carousel-track img {
+        height: 300px;
+        width: 400px;
+        object-fit: cover;
+        border-radius: 20px;
+        filter: grayscale(40%);
+        transition: 0.5s ease;
+    }
+
+    .carousel-track img:hover {
+        filter: grayscale(0%);
+        transform: scale(1.02);
+    }
+
+    @keyframes scroll-horizontal {
+        to {
+            transform: translateX(calc(-50% - 1rem));
+        }
+    }
+
+    .btn-submit-pro {
+        background: var(--azul-pro);
+        color: var(--blanco-puro);
+        border: none;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: 600;
+    }
+
+    .btn-submit-pro:hover {
+        background: var(--naranja-pro);
+        transform: scale(1.05);
+    }
+}

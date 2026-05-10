@@ -1,0 +1,50 @@
+@use "sass:color";
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+   "Helvetica Neue", Arial, sans-serif,
+   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$font-family-serif: "Georgia", "Times New Roman", serif;
+
+$uoc-corporate: #000078;
+$uoc-masterbrand: #73edff;
+$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+
+$uoc-accent: color.scale($uoc-corporate, $lightness: 20%);
+
+$mqMinWidth: 420px;
+
+$spacing-xs: .5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+
+$radius-sm: 8px;
+$radius-lg: 20px;
+
+$container-padding: clamp(1.5rem, 5vw, 4rem);
+
+$color-text: #1e1e1e;
+$color-white: #ffffff;
+
+/* Bootstrap */
+
+$primary: rgb(52, 67, 94);
+$secondary: rgb(226, 126, 52);
+
+
+$font-family-base: 'Inter', sans-serif;
+$headings-font-family: 'Playfair Display', serif;
+
+
+$btn-border-radius: 999px;
+$btn-padding-y: 1rem;
+$btn-padding-x: 2.5rem;
+
+
+$card-border-radius: 1.2rem;
+$card-border-width: 0;
+$card-box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+
+
+$navbar-padding-y: 1rem;
