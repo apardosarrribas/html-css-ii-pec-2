@@ -1,3 +1,4 @@
+@use "tools/dependencies";
 @use "settings/variables";
 @use "base/base";
 @use "layout/layout";
@@ -8,4 +9,5 @@
 @use "pages/contact";
 @use "pages/info";
 
-@layer base, layout, components, pages;
+@layer bootstrap, base, layout, components, pages;
+

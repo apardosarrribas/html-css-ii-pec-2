@@ -6,8 +6,9 @@
   <title>Contacto · Jornadas de Artesanía</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="assets/styles/main.scss">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -36,7 +37,7 @@
 
   <main class="contact-page">
 
-    <div class="hero__content">
+    <div class="hero__content" data-aos="fade-right">
       <h1 class="display-1">Escríbenos</h1>
 
       <form class="contact-form" name="contacto" method="POST" data-netlify="true">
@@ -64,24 +65,24 @@
       </form>
     </div>
 
-    <div class="contact-info-side">
+    <div class="contact-info-side" data-aos ="fade-left">
       <div class="info-glass-card">
         <div class="info-block">
           <span class="info-num">01</span>
-          <h4><i class="fa-solid fa-location-dot"></i> UBICACIÓN</h4>
+          <h5><i class="fa-solid fa-location-dot"></i> UBICACIÓN</h5>
           <p>Fabra i Coats, Carrer de Sant Adrià, 20, Barcelona</p>
         </div>
 
         <div class="info-block">
           <span class="info-num">02</span>
-          <h4><i class="fa-solid fa-paper-plane"></i> CONTACTO DIRECTO</h4>
+          <h5><i class="fa-solid fa-paper-plane"></i> CONTACTO DIRECTO</h5>
           <p>hola@jornadasartesania.com</p>
           <p>📞 +34 932 123 456</p>
         </div>
 
         <div class="info-block">
           <span class="info-num">03</span>
-          <h4><i class="fa-solid fa-camera"></i> REDES SOCIALES</h4>
+          <h5><i class="fa-solid fa-camera"></i> REDES SOCIALES</h5>
           <p>@artesania_bcn</p>
           <p>#ArtesaniaBarcelona2026</p>
         </div>
@@ -91,6 +92,11 @@
   </main>
 
   <include src="./views/footer.html"></include>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
